@@ -36,12 +36,20 @@ const loadCountriesDetails = (code) =>{
 }
 
 const displayCountriesDitails = ditailes => {
+    console.log(ditailes);
     const countryDetail= document.getElementById('country-detail');
     countryDetail.innerHTML=`
-    <h4>Details: ${ditailes.name.common} </h4>
+    <h4>Country Name: ${ditailes.name.common} </h4>
+    <div></div>
     <img src="${ditailes.flags.png}">
+    <div>
+    <h3>Official Name: ${ditailes.name.official}<h3>
+    <h3>Capital: ${ditailes.capital}</h3>
+    <h3>Region: ${ditailes.region}<h3>
     <h3> Populations: ${ditailes.population} , Area: ${ditailes.area}</h3>
-    <img src="${ditailes.coatOfArms.png}">
+    <h3>Car Drive side: ${ditailes.car.side}<h3>
+    </div>
+    <img id="iconSolu" src="${ditailes.coatOfArms.png}">
     `
 }
 loadCountries();
